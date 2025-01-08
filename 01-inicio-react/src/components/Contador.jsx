@@ -2,19 +2,28 @@ import { useState } from "react";
 
 const Contador = () => {
   // hooks
-  const [contador, setContador] = useState(1);
+  const [contador, setContador] = useState(0);
 
   // variables
 
   // funciones
 
   const handleClick = (numero) => {
-    // suma 1 a la variable contador
-    // contador > 0 ? setContador((prevContador)=>prevContador + numero) : contador;
-    // quiero que si contador 0 o mayor a 0 se sume
-    setContador((preContador) => preContador + numero);
-  };
+    if (numero > 0) {
+      // Si el número es positivo, siempre se puede sumar.
+      setContador((prevContador) => prevContador + numero);
+    } else if (numero < 0 && contador > 0) {
+      // Si el número es negativo, solo se resta si el contador es mayor que 0.
+      setContador((prevContador) => prevContador + numero);
+    }
 
+    // Otra forma de hacerlo
+    // setContador((prevContador) =>
+    //   numero > 0 || (numero < 0 && prevContador > 0)
+    //     ? prevContador + numero
+    //     : prevContador
+    // );
+  };
   return (
     <>
       <div className="max-w-sm mx-auto mt-8 p-6 bg-gray-200 shadow-sm rounded-md">
