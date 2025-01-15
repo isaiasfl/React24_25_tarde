@@ -1,4 +1,4 @@
-import carrito from "../../assets/carrito.png";
+import carrito from "../../assets/compras.png";
 const Button = (props) => {
   const { className, onClick } = props;
   return (

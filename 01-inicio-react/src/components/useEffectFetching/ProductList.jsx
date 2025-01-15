@@ -11,6 +11,12 @@ const ProductList = () => {
     fetchProducts();
   }, []);
 
+  // Actualizar el total del carrito cada vez que el carrito cambie
+  useEffect(() => {
+    const total = cart.reduce((acc, item) => acc + item.price, 0);
+    setTotalCarrito(total); // Actualiza el estado del total
+  }, [cart]); // Solo se ejecuta cuando el carrito cambia
+
   const fetchProducts = async () => {
     try {
       const response = await fetch("http://localhost:5173/src/data/db.json");
@@ -23,19 +29,29 @@ const ProductList = () => {
     }
   };
 
+  // Añadir producto al carrito
   const addCart = (product) => {
     setCart((prevCart) => [...prevCart, product]);
-
-    // setTotalCarrito((prevCart) => totalCart(prevCart));
-    console.log(() => totalCart(cart));
   };
+
+  // -------------- aquí va otra forma sin usar el useEffect ----------------
+  // const addCart = (product) => {
+  //   setCart((prevCart) => {
+  //     const updatedCart = [...prevCart, product];
+  //     setTotalCarrito(updatedCart.reduce((acc, item) => acc + item.price, 0));
+  //     return updatedCart;
+  //   });
+  // };
 
   const totalCart = (carrito) => {
     // debe recorrer el array CARRITO y sumar los precios de los productos
     return carrito.reduce((acc, product) => acc + product.price, 0);
   };
 
-  const removeCart = (product) => {};
+  // Eliminar producto del carrito
+  const removeCart = (productId) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+  };
 
   return (
     <div className="w-full max-w-5xl mx-auto p-4">
@@ -59,11 +75,17 @@ const ProductList = () => {
         {/* si el carrito está vacío, renderizo  el párrafo p y si no 
          renderizo el ul con los libros del carrito */}
         {cart.length === 0 ? (
-          <p>carrito vacío</p>
+          <p className="text-xl font-semibold text-center mb-6">
+            carrito vacío
+          </p>
         ) : (
           <ul>
             {cart.map((product, index) => (
-              <LiCartProduct key={index} product={product} />
+              <LiCartProduct
+                key={index}
+                product={product}
+                removeCart={removeCart}
+              />
             ))}
           </ul>
         )}
