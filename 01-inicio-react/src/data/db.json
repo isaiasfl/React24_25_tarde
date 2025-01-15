@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "title": "Aprendiendo Python",
+    "price": 29.99,
+    "tags": ["Python", "Desarrollo Web", "Data Science"],
+    "img": "https://example.com/imagenes/python_book.jpg"
+  },
+  {
+    "id": 2,
+    "title": "JavaScript para Todos",
+    "price": 24.99,
+    "tags": ["JavaScript", "Desarrollo Web", "Frontend"],
+    "img": "https://example.com/imagenes/javascript_book.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Introducción a C++",
+    "price": 34.99,
+    "tags": ["C++", "Desarrollo de Software", "Programación de Bajo Nivel"],
+    "img": "https://example.com/imagenes/cpp_book.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Mastering Java",
+    "price": 39.99,
+    "tags": ["Java", "Desarrollo Empresarial", "Backend"],
+    "img": "https://example.com/imagenes/java_book.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Dominando SQL",
+    "price": 19.99,
+    "tags": ["SQL", "Bases de Datos", "Backend"],
+    "img": "https://example.com/imagenes/sql_book.jpg"
+  },
+  {
+    "id": 6,
+    "title": "C# Avanzado",
+    "price": 34.99,
+    "tags": ["C#", "Desarrollo de Software", "Backend"],
+    "img": "https://example.com/imagenes/csharp_book.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Fundamentos de Ruby",
+    "price": 28.99,
+    "tags": ["Ruby", "Desarrollo Web", "Backend"],
+    "img": "https://example.com/imagenes/ruby_book.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Swift para Principiantes",
+    "price": 31.99,
+    "tags": ["Swift", "Desarrollo iOS", "Aplicaciones Móviles"],
+    "img": "https://example.com/imagenes/swift_book.jpg"
+  },
+  {
+    "id": 9,
+    "title": "El Arte de Programar en Go",
+    "price": 27.99,
+    "tags": ["Go", "Desarrollo Backend", "Concurrencia"],
+    "img": "https://example.com/imagenes/go_book.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Node.js: Desarrollo Backend",
+    "price": 32.99,
+    "tags": ["JavaScript", "Node.js", "Backend"],
+    "img": "https://example.com/imagenes/nodejs_book.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Deep Learning con Python",
+    "price": 45.99,
+    "tags": ["Python", "Machine Learning", "Data Science"],
+    "img": "https://example.com/imagenes/deep_learning_python_book.jpg"
+  },
+  {
+    "id": 12,
+    "title": "React.js desde Cero",
+    "price": 22.99,
+    "tags": ["JavaScript", "React", "Frontend"],
+    "img": "https://example.com/imagenes/reactjs_book.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Kotlin para Android",
+    "price": 26.99,
+    "tags": ["Kotlin", "Desarrollo Android", "Aplicaciones Móviles"],
+    "img": "https://example.com/imagenes/kotlin_book.jpg"
+  },
+  {
+    "id": 14,
+    "title": "La Guía Completa de Angular",
+    "price": 39.99,
+    "tags": ["JavaScript", "Angular", "Frontend"],
+    "img": "https://example.com/imagenes/angular_book.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Java 8: Novedades y Características",
+    "price": 33.99,
+    "tags": ["Java", "Desarrollo de Software", "Backend"],
+    "img": "https://example.com/imagenes/java8_book.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Python para Análisis de Datos",
+    "price": 38.99,
+    "tags": ["Python", "Data Science", "Análisis de Datos"],
+    "img": "https://example.com/imagenes/python_data_analysis_book.jpg"
+  },
+  {
+    "id": 17,
+    "title": "HTML5 y CSS3: Guía Definitiva",
+    "price": 19.99,
+    "tags": ["HTML", "CSS", "Frontend"],
+    "img": "https://example.com/imagenes/html_css_book.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Programación en Rust",
+    "price": 35.99,
+    "tags": ["Rust", "Desarrollo de Software", "Concurrencia"],
+    "img": "https://example.com/imagenes/rust_book.jpg"
+  },
+  {
+    "id": 19,
+    "title": "JavaScript Asíncrono",
+    "price": 28.99,
+    "tags": ["JavaScript", "Node.js", "Asíncrono"],
+    "img": "https://example.com/imagenes/js_async_book.jpg"
+  },
+  {
+    "id": 20,
+    "title": "El Desarrollo Ágil con Python",
+    "price": 41.99,
+    "tags": ["Python", "Desarrollo Ágil", "Metodologías Ágiles"],
+    "img": "https://example.com/imagenes/agile_python_book.jpg"
+  }
+]
