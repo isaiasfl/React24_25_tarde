@@ -15,14 +15,30 @@ const TaskList = () => {
             className="flex justify-between items-center p-2 mb-2 bg-white rounded-lg shadow-md"
           >
             <span
-              className={`flex-1 ${
-                task.completed ? "line-through text-gray-600" : ""
+              className={`flex-1 mx-4 font-bold ${
+                task.completed ? "line-through text-gray-600" : "text-blue-500 "
               }`}
             >
               {task.title}
             </span>
-            <button>Editar</button>
-            <button>Eliminar</button>
+            <button
+              className="px-3 py-1 bg-blue-700 text-white rounded mr-2
+              hover:bg-slate-800
+              
+              "
+              onClick={() => toggleTaskCompletion(task.id)}
+            >
+              Completar
+            </button>
+            <button
+              className="px-3 py-1 bg-orange-700 text-white rounded mr-2
+              hover:bg-slate-800
+              
+              "
+              onClick={() => removeTask(task.id)}
+            >
+              Eliminar
+            </button>
           </li>
         ))}
       </ul>
