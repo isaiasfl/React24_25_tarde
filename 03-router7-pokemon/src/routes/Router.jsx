@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
         element: <Favorites />,
       },
       {
-        path: ROUTES.POKEMON_DETAIL,
+        path: ROUTES.POKEMON_DETAIL,  //search/:name
         element: <PokemonDetail />,
         // Loader es una característica de react-router-dom nueva
         // que permite cargar datos antes de renderizar el componente
@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
             if (!response.ok) {
               throw new Error("Failed to fetch pokemons");
             }
-            return response.json();
+            return await response.json();
           } catch (error) {}
         },
         errorElement: <ErrorPage />,
