@@ -3,10 +3,9 @@ import { Outlet } from "react-router-dom";
 
 const RootLayout = () => {
   return (
-    <>
-      <div>RootLayout</div>
+    <div className="min-h-screen bg-gray-100">
       <Outlet />
-    </>
+    </div>
   );
 };
 
