@@ -13,13 +13,15 @@ const fetchFromAPI = async (endpoint, options = {}) => {
   try {
     //https://api.themoviedb.org/3/movie/popular?api_key=8930572ca461d9b58d8f05f72d6f419a&language=es-ES
     const response = await fetch(
-      `${BASE_URL}${endpoint}?api_key=${API_KEY}&language=es-ES`
+      `${BASE_URL}${endpoint}?api_key=${API_KEY}&language=es-ES&${new URLSearchParams(
+        options
+      )}`
     );
     if (!response.ok) {
       throw new Error("Error en la petición");
     }
-    const { results } = await response.json();
-    return results;
+    const data = await response.json();
+    return data;
   } catch (error) {
     console.error(error);
     throw error;
@@ -33,6 +35,10 @@ export const getPopularMovies = async () => {
 
 export const getMovieDetail = async (id) => {
   return await fetchFromAPI(`/movie/${id}`);
+};
+
+export const getImageURL = (path, size = SIZE.POSTER) => {
+  return `${BASE_IMAGE_URL}/${size}${path}`;
 };
 
 export const getMovieVideos = async (id) => {
