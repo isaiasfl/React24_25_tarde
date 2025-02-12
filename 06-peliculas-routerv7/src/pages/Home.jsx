@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import PacmanLoader from "react-spinners/PacmanLoader";
 import MovieCard from "../components/MovieCard";
@@ -12,7 +12,7 @@ const Home = () => {
   );
   const handlePageChange = (newPage) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    setPage((prevPage) => prevPage + newPage);
+    setPage(newPage);
   };
 
   // si se produce un error qué hago
@@ -60,7 +60,7 @@ const Home = () => {
             <div className="flex justify-center mt-8 gap-2 mb-10">
               <button
                 className="bg-sky-900 text-white px-4 py-2 rounded-lg hover:bg-gray-700"
-                onClick={() => handlePageChange(1)}
+                onClick={() => handlePageChange(page - 1)}
                 disabled={page === 1}
               >
                 Anterior
