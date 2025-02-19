@@ -1,0 +1,65 @@
+curl -X POST http://192.168.50.134:3000/api/products \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2N2I1Zjg2MGJiNDI1NGY4MTVjN2RkMzQiLCJpYXQiOjE3Mzk5Nzg4NTcsImV4cCI6MTc0MDA2NTI1N30.UGb6hrtGC3Djba5vb70lX9xYQpDYyeVlbX41DQK2M8c" \
+  -d '[
+    {
+      "name": "MacBook Air 13\"",
+      "description": "Laptop ultraportátil con chip M1, 8GB RAM, 256GB SSD.",
+      "price": 999.99,
+      "stock": 15
+    },
+    {
+      "name": "Dell XPS 13",
+      "description": "Laptop ultradelgada con procesador Intel i7, 16GB RAM, 512GB SSD.",
+      "price": 1299.99,
+      "stock": 20
+    },
+    {
+      "name": "Logitech MX Master 3",
+      "description": "Ratón ergonómico con conectividad Bluetooth, recargable.",
+      "price": 99.99,
+      "stock": 30
+    },
+    {
+      "name": "HP Spectre x360 14",
+      "description": "Convertible 2 en 1 con pantalla táctil, Intel i7, 16GB RAM, 512GB SSD.",
+      "price": 1499.00,
+      "stock": 10
+    },
+    {
+      "name": "Razer Kraken Ultimate",
+      "description": "Auriculares para gaming con sonido envolvente 7.1, micrófono retráctil.",
+      "price": 119.99,
+      "stock": 50
+    },
+    {
+      "name": "Samsung 27\" Curved Monitor",
+      "description": "Monitor Curvo de 27 pulgadas con resolución 1080p y frecuencia de actualización de 144Hz.",
+      "price": 249.99,
+      "stock": 40
+    },
+    {
+      "name": "Microsoft Surface Pro 7",
+      "description": "Tableta convertible con teclado, Intel i5, 8GB RAM, 128GB SSD.",
+      "price": 749.99,
+      "stock": 25
+    },
+    {
+      "name": "Seagate Backup Plus 2TB",
+      "description": "Disco duro externo de 2TB con USB 3.0, ideal para almacenamiento adicional.",
+      "price": 59.99,
+      "stock": 100
+    },
+    {
+      "name": "Kingston HyperX Alloy FPS Pro",
+      "description": "Teclado mecánico compacto para gaming, retroiluminado, interruptores Cherry MX.",
+      "price": 89.99,
+      "stock": 75
+    },
+    {
+      "name": "Corsair Vengeance LPX 16GB",
+      "description": "Memoria RAM DDR4, 16GB (2 x 8GB), 3200MHz, ideal para gaming y tareas de alto rendimiento.",
+      "price": 74.99,
+      "stock": 60
+    }
+  ]'
